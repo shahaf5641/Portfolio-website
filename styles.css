@@ -205,6 +205,12 @@ img {
   padding: 1.3rem 0;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .brand,
 .nav a,
 .button,
@@ -243,6 +249,47 @@ img {
   font-weight: 700;
   letter-spacing: 0.01em;
   transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease, background 200ms ease, color 200ms ease;
+}
+
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.72rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(111, 247, 215, 0.32);
+  background: linear-gradient(135deg, var(--accent), #c7fff2);
+  color: #051118;
+  font-family: "Sora", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 16px 34px rgba(111, 247, 215, 0.2);
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease, background 200ms ease, color 200ms ease;
+}
+
+.resume-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: rgba(5, 17, 24, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(5, 17, 24, 0.08);
+}
+
+.resume-icon svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  stroke: #051118;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .page-content {
@@ -370,6 +417,7 @@ img {
 
 .button:hover,
 .nav a:hover,
+.resume-download:hover,
 .project-link:hover,
 .inline-links a:hover,
 .contact-links a:hover,
@@ -385,6 +433,13 @@ img {
   box-shadow: 0 18px 44px rgba(111, 247, 215, 0.32);
 }
 
+.resume-download:hover {
+  color: #041018;
+  background: linear-gradient(135deg, #8affdf, #d4fff5);
+  border-color: rgba(111, 247, 215, 0.46);
+  box-shadow: 0 18px 40px rgba(111, 247, 215, 0.28);
+}
+
 .nav a.is-active {
   color: #051118;
   border-color: rgba(111, 247, 215, 0.44);
@@ -394,6 +449,7 @@ img {
 
 .button:active,
 .nav a:active,
+.resume-download:active,
 .project-link:active,
 .inline-links a:active,
 .contact-links a:active,
@@ -647,6 +703,12 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
+  }
+
+  .header-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero {

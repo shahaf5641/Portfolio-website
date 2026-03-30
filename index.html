@@ -33,12 +33,24 @@
 
     <header class="site-header">
       <a class="brand" href="#top">Shahaf Israel</a>
-      <nav class="nav">
-        <a href="#about" data-cursor-label="navigate()">About</a>
-        <a href="#experience" data-cursor-label="navigate()">Experience</a>
-        <a href="#projects" data-cursor-label="navigate()">Projects</a>
-        <a href="#contact" data-cursor-label="navigate()">Contact</a>
-      </nav>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="#about" data-cursor-label="navigate()">About</a>
+          <a href="#experience" data-cursor-label="navigate()">Experience</a>
+          <a href="#projects" data-cursor-label="navigate()">Projects</a>
+          <a href="#contact" data-cursor-label="navigate()">Contact</a>
+        </nav>
+        <a class="resume-download magnetic" href="Shahaf_Israel_CV.pdf" download data-cursor-label="download()">
+          <span>My Resume</span>
+          <span class="resume-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+              <path d="M12 3v10.2"></path>
+              <path d="M7.8 10.8 12 15l4.2-4.2"></path>
+              <path d="M5 18.5h14"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
     </header>
 
     <main id="top" class="page-content">
@@ -53,7 +65,6 @@
           </p>
           <div class="hero-actions intro-item">
             <a class="button button-primary magnetic" href="#projects" data-cursor-label="navigate()">View Projects</a>
-            <a class="button button-secondary magnetic" href="Shahaf_Israel_CV.pdf" download data-cursor-label="download()">Download CV</a>
             <button class="button button-secondary magnetic copy-email" type="button" data-email="shahaf564@gmail.com" data-default-text="shahaf564@gmail.com" data-cursor-label="copy()">shahaf564@gmail.com</button>
           </div>
         </div>
@@ -64,11 +75,11 @@
             <span>Python</span>
             <span>C#</span>
             <span>.NET</span>
-            <span>Azure DevOps</span>
+            <span>Azure</span>
             <span>Selenium</span>
             <span>BeautifulSoup</span>
-            <span>SQL</span>
             <span>Docker</span>
+            <span>PostgreSQL</span>
             <span>CI/CD</span>
             <span>Flask</span>
             <span>Java</span>
@@ -139,20 +150,22 @@
                 <span>Selenium</span>
                 <span>BeautifulSoup</span>
                 <span>Pandas</span>
+                <span>Docker</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
                 <span>Chrome Session</span>
                 <span>Automation</span>
                 <span>Web UI</span>
                 <span>Ngrok</span>
-                <span>Redis</span>
               </div>
             </div>
             <a class="project-link" href="https://github.com/shahaf5641/Automation-System-for-Facebook-Data-Collection" target="_blank" rel="noreferrer" data-cursor-label="open()">View on GitHub</a>
           </div>
           <p>
-            Facebook Data Extractor is a Python-based system for collecting Facebook group data through a simple web interface. It uses Selenium with BeautifulSoup to search groups by keyword, open selected groups, extract post details, and organize the results in a structured format.
+            Facebook Data Extractor is a web-based Facebook groups scraper with a dedicated UI for starting runs, stopping jobs, monitoring progress, and downloading CSV results. It uses Selenium with BeautifulSoup to search Facebook groups, collect post data, and organize the results in a structured format.
           </p>
           <p>
-            The project includes Flask for the web UI, Pandas for handling the extracted data, a persistent Chrome session for authenticated browsing, and Ngrok support for exposing the local app when needed.
+            The latest version runs in Docker and includes Flask for the app layer, Redis for queue and live job state, PostgreSQL for persistent run history, Pandas for data handling, and a Selenium browser container for the scraping flow. It also supports queued runs, per-user job control, CSV download, and ngrok exposure when the app needs to be shared externally.
           </p>
           <div class="video-placeholder">
             <p>Demo video coming soon</p>
@@ -202,7 +215,6 @@
         <article class="glass-card contact-card tilt-card">
           <button class="contact-email magnetic copy-email" type="button" data-email="shahaf564@gmail.com" data-default-text="shahaf564@gmail.com" data-cursor-label="copy()">shahaf564@gmail.com</button>
           <div class="contact-links">
-            <a class="magnetic" href="Shahaf_Israel_CV.pdf" download data-cursor-label="download()">Download CV</a>
             <a class="magnetic" href="https://www.linkedin.com/in/shahaf-israel-0a6502173/" target="_blank" rel="noreferrer" data-cursor-label="open()">LinkedIn</a>
             <a class="magnetic" href="https://github.com/shahaf5641" target="_blank" rel="noreferrer" data-cursor-label="open()">GitHub</a>
           </div>
