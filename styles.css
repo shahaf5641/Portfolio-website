@@ -217,7 +217,8 @@ img {
 .project-link,
 .inline-links a,
 .contact-links a,
-.contact-email {
+.contact-email,
+.contact-phone {
   text-decoration: none;
 }
 
@@ -373,7 +374,8 @@ img {
 .project-link,
 .inline-links a,
 .contact-links a,
-.contact-email {
+.contact-email,
+.contact-phone {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -385,7 +387,8 @@ img {
 }
 
 .button,
-.contact-email {
+.contact-email,
+.contact-phone {
   font-family: "Sora", sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -411,7 +414,8 @@ img {
 .project-link,
 .inline-links a,
 .contact-links a,
-.contact-email {
+.contact-email,
+.contact-phone {
   background: rgba(255, 255, 255, 0.04);
 }
 
@@ -421,7 +425,8 @@ img {
 .project-link:hover,
 .inline-links a:hover,
 .contact-links a:hover,
-.contact-email:hover {
+.contact-email:hover,
+.contact-phone:hover {
   border-color: rgba(111, 247, 215, 0.36);
   background: linear-gradient(135deg, rgba(111, 247, 215, 0.14), rgba(120, 166, 255, 0.16));
   box-shadow: 0 16px 32px rgba(5, 17, 31, 0.34);
@@ -453,7 +458,8 @@ img {
 .project-link:active,
 .inline-links a:active,
 .contact-links a:active,
-.contact-email:active {
+.contact-email:active,
+.contact-phone:active {
   transform: translateY(1px) scale(0.985);
   box-shadow: 0 10px 24px rgba(5, 17, 31, 0.24);
 }
@@ -657,7 +663,17 @@ img {
   flex-wrap: wrap;
 }
 
+.contact-primary {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
 .contact-email {
+  font-size: 1.05rem;
+}
+
+.contact-phone {
   font-size: 1.05rem;
 }
 
@@ -671,7 +687,8 @@ img {
 .project-link,
 .inline-links a,
 .contact-links a,
-.contact-email {
+.contact-email,
+.contact-phone {
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -737,6 +754,10 @@ img {
   .contact-card {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .contact-primary {
+    width: 100%;
   }
 
   .code-layer,
