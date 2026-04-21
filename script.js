@@ -10,6 +10,8 @@ const labeledItems = document.querySelectorAll('[data-cursor-label]');
 const copyEmailButtons = document.querySelectorAll('.copy-email');
 const navLinks = document.querySelectorAll('.nav a');
 const trackedSections = document.querySelectorAll('section[id]');
+const navToggle = document.querySelector('.nav-toggle');
+const siteHeader = document.querySelector('.site-header');
 
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
@@ -53,8 +55,21 @@ navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     navLinks.forEach((item) => item.classList.remove('is-active'));
     link.classList.add('is-active');
+    if (siteHeader && window.innerWidth <= 720) {
+      siteHeader.classList.remove('is-menu-open');
+      if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
   });
 });
+
+if (navToggle && siteHeader) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = siteHeader.classList.toggle('is-menu-open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
 
 copyEmailButtons.forEach((button) => {
   button.addEventListener('click', async () => {

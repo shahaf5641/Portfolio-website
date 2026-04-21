@@ -33,8 +33,13 @@
 
     <header class="site-header">
       <a class="brand" href="#top">Shahaf Israel</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="header-right">
-        <nav class="nav">
+        <nav id="site-nav" class="nav">
           <a href="#about" data-cursor-label="navigate()">About</a>
           <a href="#experience" data-cursor-label="navigate()">Experience</a>
           <a href="#projects" data-cursor-label="navigate()">Projects</a>
@@ -158,7 +163,10 @@
                 <span>OpenAI Realtime API</span>
               </div>
             </div>
-            <a class="project-link" href="https://github.com/shahaf5641/meet-shahaf" target="_blank" rel="noreferrer" data-cursor-label="open()">View on GitHub</a>
+            <div class="project-actions">
+              <a class="project-link" href="https://meet-shahaf.vercel.app/" target="_blank" rel="noreferrer" data-cursor-label="open()">Open Live Demo</a>
+              <a class="project-link" href="https://github.com/shahaf5641/meet-shahaf" target="_blank" rel="noreferrer" data-cursor-label="open()">View on GitHub</a>
+            </div>
           </div>
           <p>
             A full-stack interview simulation platform with a Three.js 3D avatar interface and real-time voice interaction.
@@ -166,8 +174,13 @@
           <p>
             It includes a backend streaming layer that handles continuous audio exchange between the client and the OpenAI Realtime API, along with a pre-generated static audio response library that enables instant playback with zero per-question latency or cost.
           </p>
-          <div class="video-placeholder">
-            <p>Demo Will be added soon</p>
+          <div class="project-video live-demo-frame">
+            <iframe
+              src="https://meet-shahaf.vercel.app/"
+              title="Meet Shahaf live demo"
+              allow="microphone; camera; autoplay; clipboard-write"
+              loading="lazy"
+            ></iframe>
           </div>
         </article>
 

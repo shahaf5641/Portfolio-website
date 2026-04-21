@@ -211,6 +211,29 @@ img {
   gap: 1rem;
 }
 
+.nav-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(120, 166, 255, 0.18);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(13, 28, 49, 0.88), rgba(9, 18, 34, 0.92));
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--text);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
 .brand,
 .nav a,
 .button,
@@ -601,6 +624,13 @@ img {
   margin-bottom: 1rem;
 }
 
+.project-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
 .project-card h3 {
   margin: 0 0 1rem;
   font-family: "Sora", sans-serif;
@@ -649,6 +679,12 @@ img {
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
+}
+
+.live-demo-frame iframe {
+  min-height: 620px;
+  aspect-ratio: auto;
+  background: rgba(6, 14, 28, 0.7);
 }
 
 .contact-section {
@@ -722,10 +758,49 @@ img {
     gap: 0.8rem;
   }
 
+  .nav-toggle {
+    display: inline-flex;
+    position: absolute;
+    top: 1.1rem;
+    right: 0;
+  }
+
   .header-right {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .site-header.is-menu-open .header-right {
+    display: flex;
+  }
+
+  .site-header.is-menu-open .nav-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .site-header.is-menu-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header.is-menu-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav a {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .hero {
@@ -754,6 +829,14 @@ img {
   .contact-card {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .project-actions {
+    width: 100%;
+  }
+
+  .live-demo-frame iframe {
+    min-height: 520px;
   }
 
   .contact-primary {
