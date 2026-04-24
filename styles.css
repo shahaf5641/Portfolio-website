@@ -735,6 +735,32 @@ img {
     grid-template-columns: 1fr;
   }
 
+  #scene-canvas {
+    opacity: 0.78;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    padding: 1.4rem 1rem 1.2rem 0;
+    max-width: 760px;
+  }
+
+  .hero-copy::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(4, 12, 24, 0.84), rgba(4, 12, 24, 0.4));
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+  .hero-text {
+    color: rgba(236, 244, 255, 0.96);
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  }
+
   .about-photo-wrap {
     min-height: 340px;
   }
@@ -809,28 +835,11 @@ img {
   }
 
   .hero-copy {
-    position: relative;
     padding: 1.2rem 0.2rem 1rem 0;
-    z-index: 2;
-  }
-
-  .hero-copy::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(4, 12, 24, 0.82), rgba(4, 12, 24, 0.38));
-    filter: blur(10px);
-    border-radius: 26px;
-    z-index: -1;
   }
 
   .hero-title {
     font-size: clamp(3rem, 14vw, 4.9rem);
-  }
-
-  .hero-text {
-    color: rgba(236, 244, 255, 0.96);
-    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
   }
 
   .section-head {
